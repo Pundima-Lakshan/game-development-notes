@@ -1,0 +1,272 @@
+body {
+    font-weight: 400;
+    font-size: 16px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    text-align: left;
+    line-height: 170%;
+    color: #e0e0e0;
+    background: #1e1e1e; 
+}
+
+@media screen and (max-width: 100em) {
+    body {
+        padding: 4px;
+    }
+}
+
+/* Reset heading/link fonts to body (serif) */
+.md a,
+.md div.title, .md .tocHeader,
+.md h1, .md h2, .md h3, .md h4, .md h5, .md h6,
+.md .nonumberh1, .md .nonumberh2, .md .nonumberh3, .md .nonumberh4, .md .nonumberh5, .md .nonumberh6,
+.md .shortTOC, .md .mediumTOC, .md .longTOC {
+    font-family: inherit;
+}
+
+.md .tocHeader {
+    border: none;
+    margin-top: 25px;
+    font-size: 100%;
+    font-weight: 300;
+}
+
+.md .longTOC .level1 {
+    font-weight: 300;
+    margin-bottom: -30px;
+}
+
+.md div.title, .md div.subtitle, .md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+    font-weight: 300;
+}
+
+.md div.title {
+    font-size: 43px;
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.md div.subtitle {
+    text-align: left;
+    font-size: 115%;
+}
+
+.md div.afterTitles {
+    margin-top: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    height: 0px;
+    border-bottom: 1px solid #888;
+}
+
+.md div.afterTitles + p {
+    margin-top: 30px;
+}
+
+.md h1 {
+    font-size: 175%;
+    margin-bottom: 25px;
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-top: 25px;
+    border-bottom: none;
+    border-top: 6px solid #666;
+}
+
+.md h2 {
+    font-size: 150%;
+    border: none;
+}
+
+.md h3, .md h4, .md h5, .md h6 {
+    font-size: 120%;
+}
+
+.md code {
+    font-size: 90%;
+    background: #2a2a2a;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.md .longTOC {
+    font-weight: 300;
+}
+
+.md pre.listing {
+    font-size: 100%;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    padding: 10px;
+    overflow-x: auto;
+}
+
+.md pre.listing code {
+    font-weight: normal;
+    background: none;
+    color: inherit;
+}
+
+/* Wide screen: TOC on side */
+@media screen and (min-width: 40em) {
+    .md .longTOC {
+        display: block;
+        white-space: nowrap;
+        width: 270px;
+        border-right: 1px solid #444;
+        overflow-y: auto;
+        font-family: inherit;
+        background: #1a1a1a;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 0 0 0 10px;
+    }
+    
+    body {
+        position: absolute;
+        left: 300px;
+        right: 0;
+        margin: 0;
+        padding: 0 15px 0 0;
+        max-width: 800px;
+    }
+}
+
+/* EPUB Dark Mode - Clean, Native, Performant */
+@media screen {
+    .md div.longTOC {
+        font-size: 15px;
+    }
+
+    .md svg.diagram {
+        stroke: #ddd;
+        fill: #ddd;
+    }
+
+    .md svg.diagram .opendot {
+        fill: #1e1e1e;
+    }
+
+    .md table.table {
+        background-color: #2a2a2a;
+        border: 1px solid #444;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    .md table.table tr:nth-child(even) {
+        background-color: #252525;
+    }
+
+    .md table.table td,
+    .md table.table th {
+        border: 1px solid #444;
+        padding: 8px 12px;
+    }
+
+    .md table.table th {
+        background-color: #333;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .md pre.listing {
+        background: #2a2a2a;
+        border: 1px solid #444;
+        overflow-x: auto;
+    }
+
+    .md code {
+        color: #fff;
+        background: #2a2a2a;
+    }
+
+    .md .tocTop {
+        display: inline;
+    }
+
+    .md div.title,
+    .md div.subtitle,
+    .md h1, .md h2, .md h3, .md h4, .md h5, .md h6 {
+        color: #fff;
+    }
+
+    /* Syntax Highlighting - Clean & EPUB-safe */
+    .hljs-comment, .hljs-quote { color: #888; }
+    .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name,
+    .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #f28b82; }
+    .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal,
+    .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f7c66c; }
+    .hljs-attribute { color: #d9d967; }
+    .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #a5d6a7; }
+    .hljs-title, .hljs-section { color: #81a1c1; }
+    .hljs-keyword, .hljs-selector-tag { color: #b48ead; }
+    .hljs { display: block; overflow-x: auto; background: #1e1e1e; color: #e0e0e0; padding: 0.8em; }
+    .hljs-emphasis { font-style: italic; }
+    .hljs-strong { font-weight: bold; }
+    .hljs-function .hljs-title { color: #81a1c1; }
+
+    /* Admonitions - clean, bordered, no shadows */
+    .md .admonition {
+        background: #2a2a2a;
+        border: 1px solid #448aff;
+        border-left: 2.5rem solid #448aff;
+        margin: 1.5em 0;
+        padding: 0.2em 1em;
+        position: relative;
+    }
+
+    .md .admonition-title {
+        margin: 0 -1em 0.5em -3.3rem;
+        padding: 0.4em 1em;
+        font-weight: bold;
+        background: rgba(68, 138, 255, 0.15);
+        border-bottom: 1px solid #448aff;
+    }
+
+    .md .admonition.warn, .md .admonition.warning {
+        border-color: #ffaa00;
+        border-left-color: #ffaa00;
+    }
+    .md .admonition.warn .admonition-title,
+    .md .admonition.warning .admonition-title {
+        background: rgba(255, 170, 0, 0.15);
+        border-bottom-color: #ffaa00;
+    }
+
+    .md .admonition.tip {
+        border-color: #448aff;
+        border-left-color: #448aff;
+    }
+    .md .admonition.tip .admonition-title {
+        background: rgba(68, 138, 255, 0.15);
+        border-bottom-color: #448aff;
+    }
+
+    .md .admonition.error {
+        border-color: #ff1744;
+        border-left-color: #ff1744;
+    }
+    .md .admonition.error .admonition-title {
+        background: rgba(255, 23, 68, 0.15);
+        border-bottom-color: #ff1744;
+    }
+
+    /* Links - visible, underlined */
+    .md .longTOC a,
+    .md a:link, .md a:visited,
+    .md a:link code, .md a:visited code {
+        color: #81a1c1 !important;
+        text-decoration: underline;
+    }
+
+    /* Ensure TOC links are readable */
+    .md .longTOC a { 
+      color: #81a1c1;
+      text-decoration: none;
+    }
+}

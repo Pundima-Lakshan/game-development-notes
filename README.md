@@ -1,2 +1,3 @@
-# game-development-notes
-Game Development Notes
+# Game Development Notes
+
+Just starting
